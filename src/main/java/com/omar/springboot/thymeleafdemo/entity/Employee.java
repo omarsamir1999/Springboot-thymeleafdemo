@@ -27,6 +27,9 @@ public class Employee {
     @Column(name = "email")
     private String email;
 
+    @Column(name = "gpa")
+    private double gpa;
+
 
     // define constructors
 
@@ -34,18 +37,21 @@ public class Employee {
 
     }
 
-    public Employee(int id, String firstName, String lastName, String email) {
+    public Employee(int id, String firstName, String lastName, String email, double gpa) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
+        this.gpa=gpa;
     }
 
 
-    public Employee(String firstName, String lastName, String email) {
+    public Employee( String firstName, String lastName, String email, double gpa) {
+
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
+        this.gpa=gpa;
     }
 
     // define getter/setter
@@ -82,12 +88,14 @@ public class Employee {
         this.email = email;
     }
 
-    // define toString
-
-    @Override
-    public String toString() {
-        return "Employee [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", email=" + email + "]";
+    public double getGpa() {
+        return gpa;
     }
+
+    public void setGpa(double gpa) {
+        this.gpa = gpa;
+    }
+
 
 }
 
