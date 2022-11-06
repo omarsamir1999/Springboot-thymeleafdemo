@@ -27,8 +27,6 @@ public class Employee {
     @Column(name = "email")
     private String email;
 
-    @Column(name = "gpa")
-    private double gpa;
 
 
     // define constructors
@@ -42,7 +40,7 @@ public class Employee {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
-        this.gpa=gpa;
+
     }
 
 
@@ -51,7 +49,6 @@ public class Employee {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
-        this.gpa=gpa;
     }
 
     // define getter/setter
@@ -88,13 +85,6 @@ public class Employee {
         this.email = email;
     }
 
-    public double getGpa() {
-        return gpa;
-    }
-
-    public void setGpa(double gpa) {
-        this.gpa = gpa;
-    }
 
 
 }
